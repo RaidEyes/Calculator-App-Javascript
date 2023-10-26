@@ -1,0 +1,182 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    caret-color: transparent;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+  /** Declare variables herer */
+
+  :root{
+    /* theme 1 */
+    --main-background: hsl(222, 26%, 31%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --screen-background:hsl(224, 36%, 15%);
+    --key-background-delete: hsl(225, 21%, 49%);
+    --key-shadow-delete:   hsl(224, 28%, 35%);
+    --key-background-number:  hsl(30, 25%, 89%);
+    --key-background-shadow: hsl(6, 70%, 34%);
+    --key-background-equal: hsl(6, 63%, 50%);
+    --key-shadow-equal: hsl(6, 70%, 34%);
+    --key-background-shadow:hsl(28, 16%, 65%);
+    --text-color: hsl(221, 14%, 31%);
+    --white-color: hsl(0,0%,100%);
+    /* theme 2 */
+    /* theme 3 */
+    /* font-weight */
+    --font-weight-light: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+  }
+
+  /* ==================================================== */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.75rem;
+    background-color: var(--main-background);
+}
+button {
+    cursor: pointer;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+}
+.nav-bar {
+    width: 100%;
+    color: var(--white-color);
+}
+.nav-bar .heading {
+    font-size: 2rem;
+}
+.nav-bar, .theme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.7rem;
+    }
+.theme .sub-heading {
+    align-self: flex-end;
+}
+.theme .theme-selection {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 0.5rem;
+    justify-items: center;
+    align-content: center;
+    font-size: 0.7rem;
+    position: relative;
+}
+
+.select-theme-btn {
+    aspect-ratio: 1/1;
+    width: 0.75rem;
+    border-radius: 50%;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    outline: black 1px solid;
+    outline-offset: 1.5px;
+}
+.select-theme-btn:hover {
+    background-color: rgba(0, 0, 0, 0.408);
+}
+.theme-selection input:checked {
+    background-color: var(--key-shadow-equal);  
+}
+.theme-selection::after {
+    content: '';
+    position: absolute;
+    bottom: 0.3rem;
+    width: 120%;
+    height: 1.1rem;
+    border-radius: 12px;
+    background-color: var(--key-background-delete);
+    z-index: -1;
+}
+.display {
+    background-color: var(--screen-background);
+    color: var(--white-color);
+    font-weight: var(--font-weight-bold);
+    width: 100%;
+    text-align: right;
+    font-size: 3rem;
+    padding-right: 1rem;
+    border-radius: 8px;
+}
+
+.number-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.7rem;
+    padding: 1rem;
+    background-color: var(--keypad-background);
+    border-radius: 8px;
+}
+.reset-btn,.equal-btn {
+    grid-column: span 2;
+}
+
+.number {
+    border-radius: 5px;
+    border: none;
+    color: var(--text-color);
+    font-weight: var(--font-weight-bold);
+    font-size: 32px;
+    background-color: var(--key-background-number);
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--key-background-shadow) 0px 3px;
+}
+.number:hover {
+    filter: brightness(120%);
+}
+.reset-btn, .del-btn {
+    font-size: 1rem;
+    color: var(--white-color);
+    background-color: var(--key-background-delete);
+    box-shadow: var(--key-shadow-delete) 0px 3px;
+}
+.equal-btn {
+    font-size: 1rem;
+    color: var(--white-color);
+    background-color: var(--key-background-equal);
+    box-shadow: var(--key-shadow-equal) 0px 3px;
+}
