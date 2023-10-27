@@ -27,9 +27,9 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ## Where to find everything
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
 
 If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
 
@@ -76,12 +76,12 @@ Remember, if you're looking for feedback on your solution, be sure to ask questi
 
 There are multiple places you can share your solution:
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
+1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack).
 2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
 3. Share your solution on other social channels like LinkedIn.
 4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
 
 The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 
@@ -92,3 +92,85 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+# Frontend Mentor - Calculator app solution
+
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- See the size of the elements adjust based on their device's screen size
+- Perform mathmatical operations like addition, subtraction, multiplication, and division
+- Adjust the color theme based on their preference
+- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
+
+### Screenshot
+
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+- HTML and CSS first of course
+- Change theme with CSS :has()
+- Work with Js:
+
+1. Change the display to what user input
+2. Apply each function for the calculation
+3. Apply reset and delete button
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Vanilla Javascript
+
+### What I learned
+
+I was able to learn theme change with CSS only and it was super cool. Kevin Powell instructs very carefully in his video. I recommend go check it out.
+
+### Continued development
+
+Everyday I get closer to clean code. Which is something I really want to achieve if I want to work with other people.
+This challenge took me only 3 days. I'm so proud of myself that I'm getting better and better.
+
+### Useful resources
+
+- Google
+- MDN
+- Bard AI (for giving me ideas)
+
+## Author
+
+- Frontend Mentor - [RaidEyes](https://www.frontendmentor.io/profile/RaidEyes)
+
+## Acknowledgments
+
+Thanks to myself for having a blast.

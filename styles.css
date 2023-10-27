@@ -32,18 +32,6 @@
 
   :root{
     /* theme 1 */
-    --main-background: hsl(222, 26%, 31%);
-    --keypad-background: hsl(223, 31%, 20%);
-    --screen-background:hsl(224, 36%, 15%);
-    --key-background-delete: hsl(225, 21%, 49%);
-    --key-shadow-delete:   hsl(224, 28%, 35%);
-    --key-background-number:  hsl(30, 25%, 89%);
-    --key-background-shadow: hsl(6, 70%, 34%);
-    --key-background-equal: hsl(6, 63%, 50%);
-    --key-shadow-equal: hsl(6, 70%, 34%);
-    --key-background-shadow:hsl(28, 16%, 65%);
-    --text-color: hsl(221, 14%, 31%);
-    --white-color: hsl(0,0%,100%);
     /* theme 2 */
     /* theme 3 */
     /* font-weight */
@@ -76,7 +64,7 @@ button {
 }
 .nav-bar {
     width: 100%;
-    color: var(--white-color);
+    color: var(--text-color);
 }
 .nav-bar .heading {
     font-size: 2rem;
@@ -87,6 +75,7 @@ button {
     justify-content: space-between;
     gap: 1rem;
     font-size: 0.7rem;
+    font-weight: var(--font-weight-bold);
     }
 .theme .sub-heading {
     align-self: flex-end;
@@ -109,8 +98,7 @@ button {
     border: none;
     appearance: none;
     cursor: pointer;
-    outline: black 1px solid;
-    outline-offset: 1.5px;
+   
 }
 .select-theme-btn:hover {
     background-color: rgba(0, 0, 0, 0.408);
@@ -125,12 +113,12 @@ button {
     width: 120%;
     height: 1.1rem;
     border-radius: 12px;
-    background-color: var(--key-background-delete);
+    background-color: var(--screen-background);
     z-index: -1;
 }
 .display {
     background-color: var(--screen-background);
-    color: var(--white-color);
+    color: var(--text-color);
     font-weight: var(--font-weight-bold);
     width: 100%;
     text-align: right;
@@ -155,7 +143,7 @@ button {
 .number {
     border-radius: 5px;
     border: none;
-    color: var(--text-color);
+    color: var(--number-color);
     font-weight: var(--font-weight-bold);
     font-size: 32px;
     background-color: var(--key-background-number);
@@ -170,13 +158,79 @@ button {
 }
 .reset-btn, .del-btn {
     font-size: 1rem;
-    color: var(--white-color);
+    color: var(--del-reset-color);
     background-color: var(--key-background-delete);
     box-shadow: var(--key-shadow-delete) 0px 3px;
 }
 .equal-btn {
     font-size: 1rem;
-    color: var(--white-color);
+    color: var(--text-color);
     background-color: var(--key-background-equal);
     box-shadow: var(--key-shadow-equal) 0px 3px;
 }
+
+/** Styling the formula <span> */
+span {
+    color: rgb(185, 179, 179);
+    font-style: italic;
+}
+
+/** Theme changing option */
+:root:has(#theme1:checked) {
+    --main-background: hsl(222, 26%, 31%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --screen-background:hsl(224, 36%, 15%);
+    --key-background-delete: hsl(225, 21%, 49%);
+    --key-shadow-delete:   hsl(224, 28%, 35%);
+    --key-background-number:  hsl(30, 25%, 89%);
+    --key-background-equal: hsl(6, 63%, 50%);
+    --key-shadow-equal: hsl(224, 28%, 35%);
+    --key-background-shadow:hsl(28, 16%, 65%);
+    --text-color: hsl(0,0%,100%);
+    --number-color: hsl(221, 14%, 31%);
+    --del-reset-color: hsl(0,0%,100%);
+}
+:root:has(#theme2:checked) {
+    --main-background: hsl(0, 0%, 90%);
+    --keypad-background: hsl(0, 5%, 81%);
+    --screen-background:hsl(0, 0%, 93%);
+    --key-background-delete: hsl(185, 42%, 37%);
+    --key-shadow-delete:   hsl(185, 58%, 25%);
+    --key-background-number:  hsl(45, 7%, 89%);
+    --key-background-equal: hsl(25, 98%, 40%);
+    --key-shadow-equal: hsl(25, 98%, 40%);
+    --key-background-shadow:hsl(28, 16%, 65%); 
+    --text-color: hsl(60, 10%, 19%);
+    --number-color: hsl(60, 10%, 19%);
+    --del-reset-color: hsl(0,0%,100%);
+}
+:root:has(#theme3:checked) {
+    --main-background: hsl(268, 75%, 9%);
+    --keypad-background:  hsl(268, 71%, 12%);
+    --screen-background:hsl(268, 71%, 12%);
+    --key-background-delete: hsl(290, 70%, 36%);
+    --key-shadow-delete:   hsl(268, 47%, 21%);
+    --key-background-number:  hsl(268, 47%, 21%);
+    --key-background-equal: hsl(176, 100%, 44%);
+    --key-shadow-equal: hsl(177, 92%, 70%);
+    --key-background-shadow:hsl(281, 89%, 26%); 
+    --text-color: hsl(52, 100%, 62%);
+    --number-color: hsl(52, 100%, 62%);
+    --del-reset-color: hsl(0,0%,100%);
+}
+
+@media (width >= 1008px) {
+    #main {
+        width: 30vw;
+    }
+    .number-wrapper {
+        width: 100%;
+    }
+}
+
+@media (780px < width < 1048px) {
+    #main {
+        width: 40vw;
+    }
+}
+
