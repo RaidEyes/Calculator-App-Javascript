@@ -8,7 +8,7 @@ let userInput = {
   lastNum: "",
 };
 let userString = [];
-const regEx = /\D/g;
+const regEx = /[+\-*/]/g;
 
 allButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -32,6 +32,7 @@ function combineNumber() {
   userInput.lastNum = userString
     .slice(signCharPosition + 1, userString.length)
     .join("");
+  console.log(userInput);
 }
 // event for each calculation
 funcButtons.forEach((button) => {
