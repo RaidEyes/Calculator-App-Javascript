@@ -60,31 +60,23 @@ equalButton.addEventListener("click", (event) => {
 });
 
 function sumFunc() {
-  const answer = parseInt(userInput.firstNum) + parseInt(userInput.lastNum);
-  inputDisplay.innerHTML = Number.isInteger(answer)
-    ? answer
-    : answer.toFixed(7);
+  const answer = parseFloat(userInput.firstNum) + parseFloat(userInput.lastNum);
+  inputDisplay.innerHTML = answer.toPrecision(7);
   userString = [];
 }
 function subtractFunc() {
-  const answer = parseInt(userInput.firstNum) - parseInt(userInput.lastNum);
-  inputDisplay.innerHTML = Number.isInteger(answer)
-    ? answer
-    : answer.toFixed(7);
+  const answer = parseFloat(userInput.firstNum) - parseFloat(userInput.lastNum);
+  inputDisplay.innerHTML = answer.toPrecision(7);
   userString = [];
 }
 function multiplyFunc() {
-  const answer = parseInt(userInput.firstNum) * parseInt(userInput.lastNum);
-  inputDisplay.innerHTML = Number.isInteger(answer)
-    ? answer
-    : answer.toFixed(7);
+  const answer = parseFloat(userInput.firstNum) * parseFloat(userInput.lastNum);
+  inputDisplay.innerHTML = answer.toPrecision(7);
   userString = [];
 }
 function divisionFunc() {
-  const answer = parseInt(userInput.firstNum) / parseInt(userInput.lastNum);
-  inputDisplay.innerHTML = Number.isInteger(answer)
-    ? answer
-    : answer.toFixed(7);
+  const answer = parseFloat(userInput.firstNum) / parseFloat(userInput.lastNum);
+  inputDisplay.innerHTML = answer.toPrecision(7);
   userString = [];
 }
 
